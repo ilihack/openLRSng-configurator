@@ -855,6 +855,9 @@
     "tx_module_rf_power": {
         "message": "RF Power (0 - 7 / min - max)"
     },
+    "tx_module_telemetry_packet_size": {
+        "message": "Telemetry Packet Size"
+    },
     "tx_module_channel_spacing": {
         "message": "Channel Spacing (5 - 25) (x 10 kHZ)"
     },

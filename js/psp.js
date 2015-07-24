@@ -163,6 +163,8 @@ PSP.process_data = function (command, message_buffer, message_length) {
             BIND_DATA = PSP.read_struct(STRUCT_PATTERN.BIND_DATA, data);
 
             GUI.log(chrome.i18n.getMessage('bind_data_received'));
+            // Note: Badzz had serial_download stuff added here, seems to happen
+            // automagically in later version... (this version =)
             break;
         case PSP.PSP_REQ_RX_CONFIG:
             RX_CONFIG = PSP.read_struct(STRUCT_PATTERN.RX_CONFIG, data);

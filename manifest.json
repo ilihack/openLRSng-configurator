@@ -4,8 +4,8 @@
     "version": "0.53",
 
     "author": "openLRSng team",
-    "name": "openLRSng - Configurator",
-    "short_name": "openLRSng",
+    "name": "openLRSng - Configurator - gitsly",
+    "short_name": "openLRSngGitsly)",
     "description": "Crossplatform configuration tool for openLRSng project",
 
     "offline_enabled": true,

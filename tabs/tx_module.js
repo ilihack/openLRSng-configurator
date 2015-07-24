@@ -226,6 +226,8 @@ function tab_initialize_tx_module() {
             BIND_DATA.rf_channel_spacing = parseInt($('input[name="channel_spacing"]').val());
             BIND_DATA.serial_baudrate = parseInt($('select[name="serial_baudrate"]').val());
             BIND_DATA.modem_params = parseInt($('select[name="data_rate"]').val());
+            BIND_DATA.serial_downlink = parseInt($('input[name="serial_downlink"]').val());
+
 
             // combine flag values
             var bind_flags = parseInt($('select[name="channel_config"]').val());
@@ -412,6 +414,10 @@ function tab_initialize_tx_module() {
 
         // ignore flipped bits 3-7 (this needs to be increased in case flag size changes from 8 bits to something bigger)
         $('select[name="channel_config"]').val(BIND_DATA.flags & ~0xF8);
+        $('input[name="serial_downlink"]').val(BIND_DATA.serial_downlink);
+
+        // TODO: See how added telemetry mode (mavlink) affects the flags here
+        // in the configurator...
 
         // Advanced settings
         // Calculate number of hop channels

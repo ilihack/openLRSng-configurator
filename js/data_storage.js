@@ -102,7 +102,9 @@ function initialize_configuration_objects(version) {
                 {'name': 'rf_channel_spacing', 'type': 'u8'},
                 {'name': 'hopchannel', 'type': 'array', 'of': 'u8', 'length': 24},
                 {'name': 'modem_params', 'type': 'u8'},
-                {'name': 'flags', 'type': 'u8'}
+                {'name': 'flags', 'type': 'u8'},
+                {'name': 'serial_downlink', 'type': 'u8'}
+
             ];
 
             var RX = [
