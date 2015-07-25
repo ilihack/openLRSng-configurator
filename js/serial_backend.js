@@ -344,6 +344,8 @@ function onOpen(openInfo) {
 
                 // run through the data/chars received
                 for (var i = 0; i < data.length; i++) {
+                    
+                    //
                     // only allow valid ASCII characters (0x1F <-> 0x7F) + line feed (0x0A)
                     if ((data[i] > 0x1F && data[i] < 0x7F) || data[i] == 0x0A) {
                         if (data[i] != 10) { // LF
@@ -358,7 +360,7 @@ function onOpen(openInfo) {
                         }
 
                         // compare buffer content "on the fly", this check is ran after each byte
-                        if (startup_message_buffer == "OpenLRSng TX starting") {
+                        if (startup_message_buffer == "OpenLRSng TX (gitsly)") {
                             GUI.timeout_remove('startup'); // make sure any further data gets processed by this timer
                             GUI.connected_to = GUI.connecting_to;
                             GUI.connecting_to = false;

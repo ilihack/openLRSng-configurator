@@ -868,7 +868,7 @@
         "message": "Data Rate (bps)"
     },
     "tx_module_telemetry_selection": {
-        "message": "Telemetry (no/yes/FrSky/smartPort)"
+        "message": "Telemetry type"
     },
     "tx_module_rc_output_configuration": {
         "message": "RC output configuration (4-16)"
@@ -989,6 +989,9 @@
     },
     "tx_module_yes_smartport": {
         "message": "Yes - smartPort"
+    },
+    "tx_module_yes_mavlink": {
+        "message": "Yes - Mavlink"
     },
 
     "notifications_app_just_updated_to_version": {

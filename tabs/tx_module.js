@@ -228,7 +228,6 @@ function tab_initialize_tx_module() {
             BIND_DATA.modem_params = parseInt($('select[name="data_rate"]').val());
             BIND_DATA.serial_downlink = parseInt($('input[name="serial_downlink"]').val());
 
-
             // combine flag values
             var bind_flags = parseInt($('select[name="channel_config"]').val());
 
@@ -241,6 +240,9 @@ function tab_initialize_tx_module() {
             } else if (parseInt($('select[name="telemetry"]').val()) == 3) {
                 // telemetry smartPort
                 bind_flags |= 0x18;
+            } else if (parseInt($('select[name="telemetry"]').val()) == 4) {
+                // telemetry mavlink
+                bind_flags |= 0x20;
             }
 
             if (parseInt($('select[name="enable_diversity"]').val()) == 1) {
@@ -384,6 +386,11 @@ function tab_initialize_tx_module() {
         if (bit_check(BIND_DATA.flags, 3) && bit_check(BIND_DATA.flags, 4)) {
             // telemetry smartPort
             $('select[name="telemetry"]').val(3);
+        }
+
+        if (bit_check(BIND_DATA.flags, 5) && !bit_check(BIND_DATA.flags, 4) && !bit_check(BIND_DATA.flags, 3)) {
+            // telemetry smartPort
+            $('select[name="telemetry"]').val(4);
         }
 
         if (bit_check(BIND_DATA.flags, 7)) {
