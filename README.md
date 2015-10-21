@@ -1,13 +1,8 @@
 openLRSng - Configurator
 ========================
-Application based on chrome.serial API running on Google Chrome/Chromium core
+My fork from the orginal openLRSng Configurator with extended Mavlink Telemetry . Application based on chrome.serial API running on Google Chrome/Chromium core
 
-Installation
-------------
-1. - Visit [Chrome web store](http://goo.gl/iX7dJx)
-2. - Click <strong>+ Free</strong>
-
-Alternative way
+Installing
 ---------------
 1. - Clone the repo to any local directory or download it as zip
 2. - Start chromium or google chrome and go to tools -> extension
@@ -17,7 +12,7 @@ Alternative way
 
 How to use
 -----------
-You can find the openLRSng - Configurator icon in your application tab "Apps"
+You can find the openLRSng gitsly - Configurator icon in your application tab "Apps"
 
 Developers
 ----------
